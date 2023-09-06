@@ -1,25 +1,19 @@
 import 'package:flutter/material.dart';
 
-//https://api.flutter.dev/flutter/painting/TextStyle-class.html
-//https://api.flutter.dev/flutter/painting/BoxDecoration-class.html
-//https://api.flutter.dev/flutter/widgets/RichText-class.html
+//https://docs.flutter.dev/cookbook/forms/text-input
 void main() => runApp(
       MaterialApp(
-        title: 'Text Style Demo',
+        title: 'Text Field Demo',
         home: Scaffold(
-            appBar: AppBar(
-              title: Text('Text Style Demo'),
+          appBar: AppBar(
+            title: Text('Text Field Demo'),
+          ),
+          body: TextField(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              hintText: 'Type something',
             ),
-            body: RichText(
-              text: TextSpan(
-                text: 'Varanasi ',
-                children: <TextSpan>[
-                  TextSpan(
-                      text: 'Software',
-                      style: TextStyle(fontWeight: FontWeight.bold)),
-                  TextSpan(text: ' Junction!'),
-                ],
-              ),
-            )),
+          ),
+        ),
       ),
     );
